@@ -9,16 +9,23 @@ const App = () => {
     description: "Study the basics of React and build a simple project",
     completed: false
   }
-  const name = "Do Minh Quan" ;
-  const age = 20; 
+  const name = "Do Minh Quan";
+  const age = 20;
+  const addNewTodo = (name) => {
+    alert(`Add new ${name} `);
+  };
+  // addNewTodo();
   return (
     <div className="todo-container">
       <div className="todo-title">Todo List</div>
-      <TodoNew />
-      <TodoData  
+      <TodoNew
+        addNewTodo={addNewTodo}
+      />
+      <TodoData
         title={todoObject}
         name={name}
         age={age}
+
       />
       <TodoImg />
     </div>
