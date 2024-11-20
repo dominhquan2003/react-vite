@@ -19,9 +19,17 @@ const App = () => {
   const name = "Do Minh Quan";
   const age = 20;
   const addNewTodo = (name) => {
-    // alert(`Add new ${name} `);
+      const newToDo = {
+        id: todoList.length + 1,
+        title: name,
+        description: "Study the basics of React and build a simple project",
+        completed: "false"
+      }
+      setTodoList([...todoList, newToDo]);
+      // todoList.push(newToDo);  This is wrong with a big application
+      // setTodoList(todoList);  This is wrong
   };
-  // addNewTodo();
+
   return (
     <div className="todo-container">
       <div className="todo-title">Todo List</div>
